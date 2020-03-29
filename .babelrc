@@ -1,0 +1,30 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "chrome": "66"
+        },
+        "corejs": {
+          "version": 2
+        },
+        "useBuiltIns": "usage",
+        "modules": "commonjs"
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", {"legacy": true}],
+    ["@babel/plugin-proposal-class-properties", {"loose": true}],
+    "add-module-exports",
+    ["import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ]
+  ]
+}
